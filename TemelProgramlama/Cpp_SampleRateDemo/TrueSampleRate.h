@@ -3,16 +3,16 @@
 
 # define PI           3.14159265358979323846
 
-class SampleRateDemo
+class TrueSampleRate
 {
 private:
     /* data */
 public:
-    SampleRateDemo(int _sampleRate);
+    TrueSampleRate(int _sampleRate);
     int sampleRate;
     int frequency;
     float* samples;
-    ~SampleRateDemo();
+    ~TrueSampleRate();
 
     void fillSine();
     void writeBuffertoFile(std::string _filename);

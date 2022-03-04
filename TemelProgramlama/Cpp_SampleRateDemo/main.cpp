@@ -1,4 +1,5 @@
 #include "SampleRateDemo.h"
+#include "TrueSampleRate.h"
 
 int main(){
 
@@ -9,7 +10,14 @@ int main(){
     SampleRateDemo demo(sampleRate);
     demo.frequency = frequency;
     demo.fillSine();
-    demo.writeBuffertoFile();
+    demo.writeBuffertoFile("SampleBuffer.temelprogornek");
+
+    int trueSampleRate = 1000;
+
+    TrueSampleRate truesr(trueSampleRate);
+    truesr.frequency = frequency;
+    truesr.fillSine();
+    truesr.writeBuffertoFile("TrueSampledBuffer.temelprogornek");
 
     return 0;
 }

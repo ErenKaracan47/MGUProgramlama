@@ -1,17 +1,17 @@
-#include "SampleRateDemo.h"
+#include "TrueSampleRate.h"
 
-SampleRateDemo::SampleRateDemo(int _sampleRate)
+TrueSampleRate::TrueSampleRate(int _sampleRate)
 {
     sampleRate = _sampleRate;
     samples = new float(sampleRate);
 }
 
-SampleRateDemo::~SampleRateDemo()
+TrueSampleRate::~TrueSampleRate()
 {
     delete[] samples;
 }
 
-void SampleRateDemo::fillSine()
+void TrueSampleRate::fillSine()
 {
     for (int i = 0; i < sampleRate; i++)
     {
@@ -19,11 +19,12 @@ void SampleRateDemo::fillSine()
     }
 }
 
-void SampleRateDemo::writeBuffertoFile(std::string _filename)
+void TrueSampleRate::writeBuffertoFile(std::string _filename)
 {
 
     std::ofstream BufferFile(_filename);
 
+    
     for (int i = 0; i < sampleRate; i++)
     {
         BufferFile << samples[i] << std::endl;

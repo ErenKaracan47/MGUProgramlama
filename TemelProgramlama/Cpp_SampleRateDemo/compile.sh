@@ -1,5 +1,5 @@
 #!/bin/bash
 
-g++ -o main main.cpp SampleRateDemo.cpp
-./main
+g++ -o main.o main.cpp SampleRateDemo.cpp
+./main.o
 python3 plotscript.py

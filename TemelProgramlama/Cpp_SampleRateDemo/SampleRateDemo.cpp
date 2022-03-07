@@ -3,7 +3,7 @@
 SampleRateDemo::SampleRateDemo(int _sampleRate)
 {
     sampleRate = _sampleRate;
-    samples = new float(sampleRate);
+    samples = new float[sampleRate];
 }
 
 SampleRateDemo::~SampleRateDemo()

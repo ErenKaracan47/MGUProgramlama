@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-with open("SampleBuffer.temelprogramlamaornek", "r") as f:
+with open("SampleBuffer.temelprogornek", "r") as f:
     
     
     readsamples = f.readlines()

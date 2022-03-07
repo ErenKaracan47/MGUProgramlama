@@ -19,10 +19,12 @@ void SampleRateDemo::fillSine()
     }
 }
 
-void SampleRateDemo::writeBuffertoFile(std::string _filename)
+void SampleRateDemo::writeBuffertoFile(int _sampleRate, std::string _filename)
 {
 
     std::ofstream BufferFile(_filename);
+
+    BufferFile << sampleRate << std::endl;
 
     for (int i = 0; i < sampleRate; i++)
     {

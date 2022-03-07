@@ -15,6 +15,6 @@ public:
     ~SampleRateDemo();
 
     void fillSine();
-    void writeBuffertoFile(std::string _filename);
+    void writeBuffertoFile(int _sampleRate, std::string _filename);
 };
 

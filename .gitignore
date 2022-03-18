@@ -34,3 +34,6 @@
 # Example Files
 *.ciz
 *.cizme
+
+# CMake Files
+build/

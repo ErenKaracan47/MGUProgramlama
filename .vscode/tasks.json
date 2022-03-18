@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Run compile script",
+			"command": "${fileDirname}/compile.sh",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "runner: /bin/bash"
+		}
+	]
+}

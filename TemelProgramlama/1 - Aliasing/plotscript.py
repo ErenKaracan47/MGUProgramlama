@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-with open("SampleBuffer.temelprogornek", "r") as f:
+with open("beni.ciz", "r") as f:
     readsamples = f.readlines()
     samplerate = float(readsamples[0])
     time = []

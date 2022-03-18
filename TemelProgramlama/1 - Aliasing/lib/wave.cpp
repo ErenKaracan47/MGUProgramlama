@@ -1,17 +1,19 @@
-#include "SampleRateDemo.h"
+#include "wave.h"
 
-SampleRateDemo::SampleRateDemo(int _sampleRate)
+wave::wave(int _sampleRate, float _duration)
 {
     sampleRate = _sampleRate;
-    samples = new float[sampleRate];
+    duration = _duration;
+    sampleTotal = (int)((float)sampleRate * duration);
+    samples = new float[sampleTotal];
 }
 
-SampleRateDemo::~SampleRateDemo()
+wave::~wave()
 {
     delete[] samples;
 }
 
-void SampleRateDemo::fillSine()
+void wave::fillSine()
 {
     for (int i = 0; i < sampleRate; i++)
     {
@@ -19,14 +21,14 @@ void SampleRateDemo::fillSine()
     }
 }
 
-void SampleRateDemo::writeBuffertoFile(int _sampleRate, std::string _filename)
+void wave::writeBuffertoFile(std::string _filename)
 {
 
     std::ofstream BufferFile(_filename);
 
     BufferFile << sampleRate << std::endl;
 
-    for (int i = 0; i < sampleRate; i++)
+    for (int i = 0; i < sampleTotal; i++)
     {
         BufferFile << samples[i] << std::endl;
     }

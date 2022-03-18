@@ -3,18 +3,20 @@
 
 # define PI           3.14159265358979323846
 
-class SampleRateDemo
+class wave
 {
 private:
     /* data */
 public:
-    SampleRateDemo(int _sampleRate);
+    wave(int _sampleRate, float _duration);
     int sampleRate;
+    int sampleTotal;
     int frequency;
+    float duration;
     float* samples;
-    ~SampleRateDemo();
+    ~wave();
 
     void fillSine();
-    void writeBuffertoFile(int _sampleRate, std::string _filename);
+    void writeBuffertoFile(std::string _filename);
 };
 

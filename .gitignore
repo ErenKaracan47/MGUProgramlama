@@ -32,4 +32,5 @@
 *.app
 
 # Example Files
-*.temelprogornek
+*.ciz
+*.cizme

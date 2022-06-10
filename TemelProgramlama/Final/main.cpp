@@ -4,8 +4,8 @@
 
 int main(){
 
-    float sampleRate = 44100.0f;
-    float duration = 1.0f;
+    const float sampleRate = 44100.0f;
+    const float duration = 1.0f;
     
     wave gorsellestirici(sampleRate, duration);
 

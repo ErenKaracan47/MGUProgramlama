@@ -37,3 +37,6 @@
 
 # CMake Files
 build/
+
+# DS_STORE
+.DS_STORE

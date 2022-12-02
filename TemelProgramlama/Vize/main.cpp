@@ -14,8 +14,7 @@ int main(){
     
     for (int i = 0; i < signal.sampleTotal; i++)
     {
-        // Generate sawtooth wave with variable frequency
-        signal.samples[i] = (i % (int)(sampleRate / frequency)) / (sampleRate / frequency) * 2 - 1;
+        signal.samples[i] = 0;
     }
 
     /* kodunuzu bu alanin ustune yazin */

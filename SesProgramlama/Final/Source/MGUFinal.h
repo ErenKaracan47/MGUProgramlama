@@ -35,7 +35,7 @@ public:
     }
 
     //==============================================================================
-    void prepareToPlay (double, int) override {}
+    void prepareToPlay (double sampleRate, int maximumExpectedSamplesPerBlock) override {}
     void releaseResources() override {}
 
     void processBlock (AudioBuffer<float>& buffer, MidiBuffer&) override

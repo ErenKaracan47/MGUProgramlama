@@ -13,6 +13,9 @@
             },
             "osx": {
                 "command": "xcodebuild -project ${workspaceFolder}/Builds/MacOSX/MGUFinal.xcodeproj -scheme 'MGUFinal - All' build",
+            },
+            "windows": {
+                "command": "& 'C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe' ${workspaceFolder}\\Builds\\VisualStudio2022\\MGUFinal.sln && explorer ${workspaceFolder}\\Builds\\VisualStudio2022\\x64\\Debug\\VST3"
             }
         }
     ]

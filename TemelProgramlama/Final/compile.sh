@@ -1,5 +1,6 @@
 #!/bin/bash
 
-g++ -o main.o main.cpp lib/wave.cpp
+g++ -std=c++17 -o main.o main.cpp lib/wave.cpp
 ./main.o
-python3 plotscript.py
+open -a "Google Chrome.app" plot.svg
+rm main.o

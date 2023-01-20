@@ -5,12 +5,17 @@ wave::wave(int _sampleRate, float _duration)
     sampleRate = _sampleRate;
     duration = _duration;
     sampleTotal = (int)((float)sampleRate * duration);
-    samples = new float[sampleTotal];
+    samples.resize(sampleTotal);
+    time.resize(sampleTotal);
+    for (size_t i = 0; i < sampleTotal; i++)
+    {
+        time[i] = (float)i / (float)sampleRate;
+    }
+    
 }
 
 wave::~wave()
 {
-    delete[] samples;
 }
 
 void wave::fillSine()
@@ -19,6 +24,18 @@ void wave::fillSine()
     {
         samples[i] = sin((frequency) * (2*PI) * ((float)i / sampleRate));
     }
+}
+
+void wave::plot()
+{
+    plotter.x.major(0).tick(duration).label("time");
+    plotter.y.major(0).minors(-1, 1).label("signal");
+    auto& line = plotter.line();
+    for (size_t i = 0; i < sampleTotal; i++)
+    {
+        line.add(time[i], samples[i]);
+    }
+    plotter.write("plot.svg");
 }
 
 void wave::writeBuffertoFile(std::string _filename)

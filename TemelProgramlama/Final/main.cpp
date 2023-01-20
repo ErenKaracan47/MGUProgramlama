@@ -23,7 +23,7 @@ int main(){
         gorsellestirici.samples[i] = sinyal[i];
     }
     
-    gorsellestirici.writeBuffertoFile("beni.ciz");
+    gorsellestirici.plot();
 
     return 0;
 }
